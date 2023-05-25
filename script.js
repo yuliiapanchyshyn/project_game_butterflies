@@ -29,22 +29,45 @@ document.addEventListener('DOMContentLoaded', () => {
           startGame();
         }
   
-        scoreElement.textContent = `Рахунок: ${score}`;
-        levelElement.textContent = `Рівень: ${level}`;
+        scoreElement.textContent = `Score: ${score}`;
+        levelElement.textContent = `Level: ${level}`;
       });
   
       gameContainer.appendChild(butterfly);
     }
   
     function startGame() {
-      butterfliesCaught = 0;
-  
-      gameInterval = setInterval(() => {
-        for (let i = 0; i < level; i++) {
-          createButterfly();
+        butterfliesCaught = 0;
+        levelElement.textContent = `Level: ${level}`;
+      
+        const difficultySelect = document.getElementById('difficulty-select');
+        const selectedDifficulty = parseInt(difficultySelect.value);
+      
+        switch (selectedDifficulty) {
+          case 1:
+            butterflySpeed = 2000; // Легкий рівень
+            butterfliesPerLevel = 1;
+            break;
+          case 2:
+            butterflySpeed = 1000; // Середній рівень
+            butterfliesPerLevel = 1;
+            break;
+          case 3:
+            butterflySpeed = 500; // Складний рівень
+            butterfliesPerLevel = 1;
+            break;
+          default:
+            butterflySpeed = 1000; // За замовчуванням встановити середній рівень
+            butterfliesPerLevel = 1;
+            break;
         }
-      }, 1000);
-    }
+      
+        gameInterval = setInterval(() => {
+          for (let i = 0; i < butterfliesPerLevel; i++) {
+            createButterfly();
+          }
+        }, butterflySpeed);
+      }
   
     startGame();
   });
