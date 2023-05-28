@@ -6,20 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Butterfly</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-  <h1>Butterfly</h1>
-  <div id="score">Score: 0</div>
-  <div id="level">Level: 1</div>
-  <div id="level">Level: 
+  <div class="container">
+    <h1>Butterfly</h1>
+    <div id="score">Score: 0</div>
+    <div id="level">Level: 1</div>
+    <div id="timer">Time: 60</div>
+    <label for="difficulty-select">Difficulty:</label>
     <select id="difficulty-select">
       <option value="1">Easy</option>
       <option value="2">Medium</option>
       <option value="3">Hard</option>
     </select>
-  <div id="game-container"></div>
+    <div id="game-container"></div>
+    <a href="#" class="button">Start Game</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
