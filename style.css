@@ -3,14 +3,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0aed1;
   font-family: Arial, sans-serif;
   background-image: url('img/butterfly.jpg');
+
 }
 
 .container {
   text-align: center;
-  background-color: #ef3fb1;
+  background-color: #a1cbfc;
+  justify-content: center;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px #ffffff;
@@ -20,10 +21,11 @@ body {
   justify-content: space-around;
 }
 
+
 h1 {
   font-size: 36px;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  color: #ff00fb;
+  text-shadow: 2px 2px 4px #ffffff;
 }
 
 #game-container {
@@ -71,7 +73,7 @@ h1 {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #b676ca;
+  background-color: #ff00fb;
   color: #efefef;
   font-size: 18px;
   text-decoration: none;
@@ -80,6 +82,6 @@ h1 {
 }
 
 .button:hover {
-  background-color: #8c178a;
+  background-color: #b676ca;
 }
 
